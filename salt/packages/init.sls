@@ -10,3 +10,8 @@ python-requirements:
     - name: pip install -r /vagrant/requirements.txt
     - require:
       - pkg: packages
+
+/usr/bin/attach-tmux.sh:
+  file.managed:
+    - source: salt://packages/attach-tmux.sh
+    - mode: 755
